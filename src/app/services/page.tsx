@@ -1,148 +1,197 @@
+import Image from "next/image";
+import {
+  FaSpa,
+  FaPaintBrush,
+  FaHandSparkles,
+  FaStar,
+  FaLeaf,
+  FaTools,
+} from "react-icons/fa";
+
 export default function Services() {
   const services = [
     {
       category: "Manicures",
+      icon: <FaHandSparkles className="text-3xl text-white mb-2" />,
+      image: "/img/services/img1.png",
       items: [
         {
           name: "Classic Manicure",
-          description: "Nail trimming, shaping, cuticle care, soothing hand massage, and your choice of polish for a polished, elegant look."
+          description:
+            "Nail trimming, shaping, cuticle care, soothing hand massage, and polish.",
         },
         {
           name: "Gel Manicure",
-          description: "Long-lasting gel polish cured under UV/LED light, ensuring a chip-free, glossy finish for up to three weeks."
+          description:
+            "Chip-free, glossy gel polish lasting up to three weeks.",
         },
         {
           name: "French Manicure",
-          description: "Timeless style with a natural base and crisp white tips, perfect for any occasion."
+          description: "Timeless natural base with crisp white tips.",
         },
         {
           name: "Spa Manicure",
-          description: "A luxurious experience with exfoliation, paraffin wax, and extended massage for ultimate relaxation."
-        }
-      ]
+          description:
+            "Exfoliation, paraffin wax, and extended massage for relaxation.",
+        },
+      ],
     },
     {
       category: "Pedicures",
+      icon: <FaSpa className="text-3xl text-white mb-2" />,
+      image: "/img/services/img2.png",
       items: [
         {
           name: "Classic Pedicure",
-          description: "Foot soak, nail trimming, shaping, cuticle care, callus removal, massage, and polish for refreshed feet."
+          description:
+            "Foot soak, trimming, shaping, cuticle care, massage, and polish.",
         },
         {
           name: "Gel Pedicure",
-          description: "Durable gel polish for toes, offering a vibrant, long-lasting shine."
+          description: "Durable gel polish with vibrant shine.",
         },
         {
           name: "Spa Pedicure",
-          description: "Indulgent treatment with aromatherapy, scrubs, masks, or hot stone massage for deep relaxation."
+          description: "Scrubs, masks, aromatherapy, or hot stone massage.",
         },
         {
           name: "Medical Pedicure",
-          description: "Focused on foot health, addressing issues like ingrown nails or calluses with expert care."
-        }
-      ]
+          description:
+            "Expert care for ingrown nails, calluses, and foot health.",
+        },
+      ],
     },
     {
       category: "Nail Enhancements",
+      icon: <FaStar className="text-3xl text-white mb-2" />,
+      image: "/img/services/img3.png",
       items: [
         {
           name: "Acrylic Nails",
-          description: "Custom extensions for added length and durability, tailored to your desired style."
+          description: "Custom extensions for added length and durability.",
         },
         {
           name: "Gel Extensions",
-          description: "Natural-looking extensions with hard gel, offering flexibility and strength."
+          description:
+            "Natural-looking extensions with flexibility and strength.",
         },
         {
           name: "Dip Powder Nails",
-          description: "Powder-based technique for vibrant, long-lasting color without UV light."
+          description:
+            "Powder-based technique for vibrant, long-lasting color.",
         },
         {
           name: "Silk/Fiberglass Wraps",
-          description: "Lightweight overlays to strengthen or repair natural nails."
-        }
-      ]
+          description: "Lightweight overlays to strengthen or repair nails.",
+        },
+      ],
     },
     {
       category: "Nail Art",
+      icon: <FaPaintBrush className="text-3xl text-white mb-2" />,
+      image: "/img/services/img4.png",
       items: [
         {
           name: "Custom Nail Art",
-          description: "Hand-painted designs, glitter, rhinestones, chrome effects, or 3D embellishments to express your unique style."
+          description:
+            "Hand-painted designs, rhinestones, glitter, and 3D embellishments.",
         },
         {
           name: "Trending Designs",
-          description: "From ombre to marble or minimalist patterns, stay on-trend with our creative artistry."
-        }
-      ]
+          description: "Ombre, marble, minimalist, and seasonal patterns.",
+        },
+      ],
     },
     {
       category: "Specialty Treatments",
+      icon: <FaLeaf className="text-3xl text-white mb-2" />,
+      image: "/img/services/img5.png",
       items: [
         {
           name: "Paraffin Wax Treatment",
-          description: "Warm wax therapy to hydrate and soften hands or feet, leaving skin silky smooth."
+          description: "Warm wax therapy to hydrate and soften hands or feet.",
         },
         {
           name: "Hydrating Masks",
-          description: "Moisturizing hand or foot masks infused with essential oils for nourishment."
+          description: "Moisturizing masks infused with essential oils.",
         },
         {
           name: "Callus Removal",
-          description: "Specialized treatment to smooth rough skin on feet for a polished finish."
-        }
-      ]
+          description: "Smooth rough skin on feet for a polished finish.",
+        },
+      ],
     },
     {
       category: "Nail Care & Maintenance",
+      icon: <FaTools className="text-3xl text-white mb-2" />,
+      image: "/img/services/img6.png",
       items: [
         {
           name: "Nail Fills",
-          description: "Refresh grown-out acrylic or gel extensions every 2–3 weeks for a flawless look."
+          description: "Refresh acrylic or gel extensions for a flawless look.",
         },
         {
           name: "Nail Repair",
-          description: "Expert fixes for cracked, chipped, or broken nails."
+          description: "Expert fixes for cracked, chipped, or broken nails.",
         },
         {
           name: "Polish Change",
-          description: "Quick refresh of nail color without a full manicure or pedicure."
-        }
-      ]
-    }
+          description: "Quick refresh of nail color without a full service.",
+        },
+      ],
+    },
   ];
 
   return (
-    <div className="min-h-screen">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-pink-600 text-center mb-8">Our Services</h2>
-        <p className="text-center text-lg text-gray-600 mb-12">
-          At Nail Luxury, we offer a range of premium nail care services designed to pamper and enhance your natural beauty.
-        </p>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <div key={service.category} className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-pink-600 mb-4">{service.category}</h3>
-              <ul className="space-y-4">
+    <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <h2 className="text-3xl font-extrabold text-[#831843] text-center mb-8">
+        Our Services
+      </h2>
+      <p className="text-center text-lg text-gray-600 mb-12">
+        At GlowByDiva, we believe nail care is more than just beauty—it’s an
+        experience of self-love, relaxation, and confidence. Our wide range of
+        services, from classic manicures and pedicures to luxury spa
+        treatments and intricate nail art, are designed to celebrate your
+        unique style while ensuring the health of your nails. Every treatment
+        is performed with the highest level of care, premium products, and an
+        eye for detail, so that every visit leaves you feeling radiant,
+        empowered, and effortlessly elegant.
+      </p>
+
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {services.map((service) => (
+          <div
+            key={service.category}
+            className="relative overflow-hidden group"
+          >
+            {/* Background image */}
+            <div className="absolute inset-0">
+              <Image
+                src={service.image}
+                alt={service.category}
+                fill
+                className="object-cover transform transition duration-500 group-hover:scale-110"
+              />
+            </div>
+
+            {/* Overlay content */}
+            <div className="relative p-6 text-white bg-black/40 md:opacity-0 md:group-hover:opacity-100 transition duration-300 h-full flex flex-col">
+              <div className="flex flex-col items-center mb-4">
+                {service.icon}
+                <h3 className="text-2xl font-semibold">{service.category}</h3>
+              </div>
+              <ul className="space-y-3">
                 {service.items.map((item) => (
                   <li key={item.name}>
-                    <h4 className="text-lg font-medium text-gray-800">{item.name}</h4>
-                    <p className="text-gray-600">{item.description}</p>
+                    <h4 className="text-lg font-medium">{item.name}</h4>
+                    <p className="text-sm">{item.description}</p>
                   </li>
                 ))}
               </ul>
             </div>
-          ))}
-        </div>
-        <div className="mt-12 text-center">
-          <a
-            href="/booking"
-            className="inline-block bg-pink-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-pink-700"
-          >
-            Book Your Appointment
-          </a>
-        </div>
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 }

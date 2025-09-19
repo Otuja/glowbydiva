@@ -7,7 +7,7 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 export default function About() {
   return (
-    <section className="mt-20 p-10 md:p-20">
+    <section className="">
       {/* Founder Highlight with Interactive Card */}
       <div className="grid grid-cols-1 space-y-10 md:grid-cols-2">
         <div className="flex justify-center">

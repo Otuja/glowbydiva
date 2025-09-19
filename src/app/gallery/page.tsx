@@ -12,9 +12,9 @@ const images = [
 
 export default function GalleryPage() {
   return (
-    <section className="min-h-screen my-20 py-5 px-6 md:py-10 md:px-8">
+    <section className="">
       <div className=" py-10 text-center">
-        <h1 className="text-4xl font-bold text-pink-600">Our Gallery</h1>
+        <h1 className="text-4xl font-bold text-[#831843]">Our Gallery</h1>
         <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
           A glimpse into the artistry and luxury experiences we create at{" "}
           <span className="font-semibold">GlowByDiva</span>. From timeless
@@ -36,7 +36,7 @@ export default function GalleryPage() {
               className="object-cover w-full h-80 transform transition duration-500 group-hover:scale-110"
             />
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+            <div className="absolute inset-0 bg-black/40 md:opacity-0 md:group-hover:opacity-100 transition duration-300 flex items-center justify-center">
               <p className="text-white text-lg font-medium">{img.alt}</p>
             </div>
           </div>
