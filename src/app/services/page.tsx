@@ -50,15 +50,15 @@ export default function Services() {
           name: "Gel Pedicure",
           description: "Durable gel polish with vibrant shine.",
         },
-        {
-          name: "Spa Pedicure",
-          description: "Scrubs, masks, aromatherapy, or hot stone massage.",
-        },
-        {
-          name: "Medical Pedicure",
-          description:
-            "Expert care for ingrown nails, calluses, and foot health.",
-        },
+        // {
+        //   name: "Spa Pedicure",
+        //   description: "Scrubs, masks, aromatherapy, or hot stone massage.",
+        // },
+        // {
+        //   name: "Medical Pedicure",
+        //   description:
+        //     "Expert care for ingrown nails, calluses, and foot health.",
+        // },
       ],
     },
     {
@@ -75,11 +75,11 @@ export default function Services() {
           description:
             "Natural-looking extensions with flexibility and strength.",
         },
-        {
-          name: "Dip Powder Nails",
-          description:
-            "Powder-based technique for vibrant, long-lasting color.",
-        },
+        // {
+        //   name: "Dip Powder Nails",
+        //   description:
+        //     "Powder-based technique for vibrant, long-lasting color.",
+        // },
         {
           name: "Silk/Fiberglass Wraps",
           description: "Lightweight overlays to strengthen or repair nails.",
@@ -102,25 +102,25 @@ export default function Services() {
         },
       ],
     },
-    {
-      category: "Specialty Treatments",
-      icon: <FaLeaf className="text-3xl text-white mb-2" />,
-      image: "/img/services/img5.png",
-      items: [
-        {
-          name: "Paraffin Wax Treatment",
-          description: "Warm wax therapy to hydrate and soften hands or feet.",
-        },
-        {
-          name: "Hydrating Masks",
-          description: "Moisturizing masks infused with essential oils.",
-        },
-        {
-          name: "Callus Removal",
-          description: "Smooth rough skin on feet for a polished finish.",
-        },
-      ],
-    },
+    // {
+    //   category: "Specialty Treatments",
+    //   icon: <FaLeaf className="text-3xl text-white mb-2" />,
+    //   image: "/img/services/img5.png",
+    //   items: [
+    //     {
+    //       name: "Paraffin Wax Treatment",
+    //       description: "Warm wax therapy to hydrate and soften hands or feet.",
+    //     },
+    //     {
+    //       name: "Hydrating Masks",
+    //       description: "Moisturizing masks infused with essential oils.",
+    //     },
+    //     {
+    //       name: "Callus Removal",
+    //       description: "Smooth rough skin on feet for a polished finish.",
+    //     },
+    //   ],
+    // },
     {
       category: "Nail Care & Maintenance",
       icon: <FaTools className="text-3xl text-white mb-2" />,
@@ -130,10 +130,10 @@ export default function Services() {
           name: "Nail Fills",
           description: "Refresh acrylic or gel extensions for a flawless look.",
         },
-        {
-          name: "Nail Repair",
-          description: "Expert fixes for cracked, chipped, or broken nails.",
-        },
+        // {
+        //   name: "Nail Repair",
+        //   description: "Expert fixes for cracked, chipped, or broken nails.",
+        // },
         {
           name: "Polish Change",
           description: "Quick refresh of nail color without a full service.",
