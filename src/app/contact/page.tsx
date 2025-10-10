@@ -1,13 +1,24 @@
 import Image from "next/image";
+import Link from "next/link";
+
 import { IoIosSend } from "react-icons/io";
 import { AiFillMessage } from "react-icons/ai";
-import { MdPerson } from "react-icons/md";
-import { MdEmail } from "react-icons/md";
+import { MdPerson, MdEmail } from "react-icons/md";
 import { PiFrameCornersLight } from "react-icons/pi";
+import { LuPhone } from "react-icons/lu";
+import { HiOutlineMail } from "react-icons/hi";
+import { SlLocationPin } from "react-icons/sl";
+
+import {
+  FaInstagram,
+  FaXTwitter,
+  FaFacebookF,
+  FaWhatsapp,
+} from "react-icons/fa6";
 
 const Contact = () => {
   return (
-    <section className="flex-1 space-y-10 w-full py-10">
+    <section className="flex-1 space-y-10 py-10">
       <div className="text-center px-4">
         <h2 className="text-5xl font-extrabold text-[#831843]">Get in Touch</h2>
         <p className="text-xl text-[#404040] mt-4 max-w-2xl mx-auto">
@@ -15,9 +26,9 @@ const Contact = () => {
           book your appointment or ask about our latest styles and offers!
         </p>
       </div>
-      <div className="max-w-6xl p-6 grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-6xl grid md:grid-cols-2 gap-12 items-center">
         {/* Left - Contact Form */}
-        <form className="space-y-5 shadow p-6 rounded-3xl">
+        <form className="space-y-5 shadow-lg p-6 rounded-3xl">
           <h1 className="font-bold text-2xl">Send us a message</h1>
           <div className="relative">
             <label className="block text-sm font-medium  mb-1 text-[#404040]">
@@ -30,7 +41,7 @@ const Contact = () => {
             <input
               type="text"
               placeholder="Your name"
-              className="w-full px-6 py-2 rounded-lg shadow focus:ring-1 focus:ring-[#831843] outline-none placeholder:text-[#d4d4d4] placeholder:text-sm"
+              className="w-full px-7 py-2 rounded-lg shadow focus:ring-1 focus:ring-[#831843] outline-none placeholder:text-[#d4d4d4] placeholder:text-sm"
             />
           </div>
 
@@ -45,7 +56,7 @@ const Contact = () => {
             <input
               type="email"
               placeholder="you@example.com"
-              className="w-full px-6 py-2 rounded-lg shadow focus:ring-1 focus:ring-[#831843] outline-none placeholder:text-[#d4d4d4] placeholder:text-sm"
+              className="w-full px-7 py-2 rounded-lg shadow focus:ring-1 focus:ring-[#831843] outline-none placeholder:text-[#d4d4d4] placeholder:text-sm"
             />
           </div>
 
@@ -60,7 +71,7 @@ const Contact = () => {
             <input
               type="text"
               placeholder="How can we help you?"
-              className="w-full px-6 py-2 rounded-lg shadow focus:ring-1 focus:ring-[#831843] outline-none placeholder:text-[#d4d4d4] placeholder:text-sm"
+              className="w-full px-7 py-2 rounded-lg shadow focus:ring-1 focus:ring-[#831843] outline-none placeholder:text-[#d4d4d4] placeholder:text-sm"
             />
           </div>
 
@@ -75,7 +86,7 @@ const Contact = () => {
             <textarea
               rows={4}
               placeholder="Your message"
-              className="w-full px-6 py-2 rounded-lg shadow focus:ring-1 focus:ring-[#831843] outline-none placeholder:text-[#d4d4d4] placeholder:text-sm"
+              className="w-full px-7 py-2 rounded-lg shadow focus:ring-1 focus:ring-[#831843] outline-none placeholder:text-[#d4d4d4] placeholder:text-sm"
             ></textarea>
           </div>
 
@@ -97,6 +108,53 @@ const Contact = () => {
             height={300}
             className="object-cover"
           />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
+        <div className="flex-1 space-y-3 items-center rounded-xl shadow p-5 hover:translate-y-[-5px] cursor-pointer">
+          <LuPhone size={30} className="text-[#831843]" />
+          <p className="font-bold text-xl text-[#262626]">Phone</p>
+          <p className="text-[#404040]">08143107814</p>
+        </div>
+        <div className="flex-1 space-y-3 items-center rounded-xl shadow p-5 hover:translate-y-[-5px] cursor-pointer">
+          <HiOutlineMail size={30} className="text-[#831843]" />
+          <p className="font-bold text-xl text-[#262626]">Email</p>
+          <p className="text-[#404040]">johnpraiseotuka@gmail.com</p>
+        </div>
+        <div className="flex-1 space-y-3 items-center rounded-xl shadow p-5 hover:translate-y-[-5px] cursor-pointer">
+          <SlLocationPin size={30} className="text-[#831843]" />
+          <p className="font-bold text-xl text-[#262626]">Location</p>
+          <p className="text-[#404040]">Ekiti, Nigeria.</p>
+        </div>
+        <div className="flex-1 space-y-3 items-center rounded-xl shadow p-5 hover:translate-y-[-5px] cursor-pointer bg-gradient-to-br from-[#ffff] to-[#fff1f2]">
+          <p className="font-bold text-xl text-[#262626]">Connect With Us</p>
+          <div className="flex space-x-3">
+            <Link
+              href="/"
+              className="rounded-full p-2.5 shadow-md text-[#831843] hover:bg-[#831843] hover:text-white"
+            >
+              <FaInstagram size={30} />
+            </Link>
+            <Link
+              href="/"
+              className="rounded-full p-2.5 shadow-md text-[#831843] hover:bg-[#831843] hover:text-white"
+            >
+              <FaXTwitter size={30} />
+            </Link>
+            <Link
+              href="/"
+              className="rounded-full p-2.5 shadow-md text-[#831843] hover:bg-[#831843] hover:text-white"
+            >
+              <FaFacebookF size={30} />
+            </Link>
+            <Link
+              href="/"
+              className="rounded-full p-2.5 shadow-md text-[#831843] hover:bg-[#831843] hover:text-white"
+            >
+              <FaWhatsapp size={30} />
+            </Link>
+          </div>
         </div>
       </div>
     </section>
