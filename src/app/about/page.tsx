@@ -19,7 +19,7 @@ export default function About() {
         </div>
 
         <div className=" flex justify-center items-center text-center">
-          <p className="italic leading-relaxed flex-grow text-xl">
+          <p className="leading-relaxed flex-grow text-xl">
             <FaQuoteLeft className="text-[#831843] inline mr-2" />
             At GlowByDiva, my vision has always been to create more than just a
             nail salon—it’s a sanctuary where women can feel empowered,
