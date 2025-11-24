@@ -1,197 +1,100 @@
-import Image from "next/image";
-import {
-  FaSpa,
-  FaPaintBrush,
-  FaHandSparkles,
-  FaStar,
-  FaLeaf,
-  FaTools,
-} from "react-icons/fa";
+'use client';
 
-export default function Services() {
-  const services = [
-    {
-      category: "Manicures",
-      icon: <FaHandSparkles className="text-3xl text-white mb-2" />,
-      image: "/img/services/img1.png",
-      items: [
-        {
-          name: "Classic Manicure",
-          description:
-            "Nail trimming, shaping, cuticle care, soothing hand massage, and polish.",
-        },
-        {
-          name: "Gel Manicure",
-          description:
-            "Chip-free, glossy gel polish lasting up to three weeks.",
-        },
-        {
-          name: "French Manicure",
-          description: "Timeless natural base with crisp white tips.",
-        },
-        {
-          name: "Spa Manicure",
-          description:
-            "Exfoliation, paraffin wax, and extended massage for relaxation.",
-        },
-      ],
-    },
-    {
-      category: "Pedicures",
-      icon: <FaSpa className="text-3xl text-white mb-2" />,
-      image: "/img/services/img2.png",
-      items: [
-        {
-          name: "Classic Pedicure",
-          description:
-            "Foot soak, trimming, shaping, cuticle care, massage, and polish.",
-        },
-        {
-          name: "Gel Pedicure",
-          description: "Durable gel polish with vibrant shine.",
-        },
-        // {
-        //   name: "Spa Pedicure",
-        //   description: "Scrubs, masks, aromatherapy, or hot stone massage.",
-        // },
-        // {
-        //   name: "Medical Pedicure",
-        //   description:
-        //     "Expert care for ingrown nails, calluses, and foot health.",
-        // },
-      ],
-    },
-    {
-      category: "Nail Enhancements",
-      icon: <FaStar className="text-3xl text-white mb-2" />,
-      image: "/img/services/img3.png",
-      items: [
-        {
-          name: "Acrylic Nails",
-          description: "Custom extensions for added length and durability.",
-        },
-        {
-          name: "Gel Extensions",
-          description:
-            "Natural-looking extensions with flexibility and strength.",
-        },
-        // {
-        //   name: "Dip Powder Nails",
-        //   description:
-        //     "Powder-based technique for vibrant, long-lasting color.",
-        // },
-        {
-          name: "Silk/Fiberglass Wraps",
-          description: "Lightweight overlays to strengthen or repair nails.",
-        },
-      ],
-    },
-    {
-      category: "Nail Art",
-      icon: <FaPaintBrush className="text-3xl text-white mb-2" />,
-      image: "/img/services/img4.png",
-      items: [
-        {
-          name: "Custom Nail Art",
-          description:
-            "Hand-painted designs, rhinestones, glitter, and 3D embellishments.",
-        },
-        {
-          name: "Trending Designs",
-          description: "Ombre, marble, minimalist, and seasonal patterns.",
-        },
-      ],
-    },
-    // {
-    //   category: "Specialty Treatments",
-    //   icon: <FaLeaf className="text-3xl text-white mb-2" />,
-    //   image: "/img/services/img5.png",
-    //   items: [
-    //     {
-    //       name: "Paraffin Wax Treatment",
-    //       description: "Warm wax therapy to hydrate and soften hands or feet.",
-    //     },
-    //     {
-    //       name: "Hydrating Masks",
-    //       description: "Moisturizing masks infused with essential oils.",
-    //     },
-    //     {
-    //       name: "Callus Removal",
-    //       description: "Smooth rough skin on feet for a polished finish.",
-    //     },
-    //   ],
-    // },
-    {
-      category: "Nail Care & Maintenance",
-      icon: <FaTools className="text-3xl text-white mb-2" />,
-      image: "/img/services/img6.png",
-      items: [
-        {
-          name: "Nail Fills",
-          description: "Refresh acrylic or gel extensions for a flawless look.",
-        },
-        // {
-        //   name: "Nail Repair",
-        //   description: "Expert fixes for cracked, chipped, or broken nails.",
-        // },
-        {
-          name: "Polish Change",
-          description: "Quick refresh of nail color without a full service.",
-        },
-      ],
-    },
-  ];
+import PageHeader from '@/components/PageHeader';
+import { motion } from 'framer-motion';
+import { Check } from 'lucide-react';
 
+const serviceCategories = [
+  {
+    title: "Hands",
+    items: [
+      { name: "Classic Manicure", price: "₦15,000", desc: "Nail shaping, cuticle care, massage, and polish." },
+      { name: "Gel Manicure", price: "₦25,000", desc: "Long-lasting gel polish with zero dry time." },
+      { name: "Spa Manicure", price: "₦35,000", desc: "Includes exfoliation, mask, and extended massage." },
+      { name: "Dip Powder", price: "₦40,000", desc: "Durable and lightweight alternative to acrylics." },
+    ]
+  },
+  {
+    title: "Feet",
+    items: [
+      { name: "Classic Pedicure", price: "₦20,000", desc: "Soak, shaping, cuticle care, scrub, massage, and polish." },
+      { name: "Spa Pedicure", price: "₦45,000", desc: "Premium treatment with callus removal, mask, and hot towels." },
+      { name: "Jelly Pedicure", price: "₦55,000", desc: "Unique jelly soak for ultimate hydration and relaxation." },
+    ]
+  },
+  {
+    title: "Nail Art & Extras",
+    items: [
+      { name: "French Tip", price: "+₦5,000", desc: "Classic white or colored tips." },
+      { name: "Custom Nail Art", price: "₦3,000+", desc: "Per finger, depending on complexity." },
+      { name: "Gel Removal", price: "₦5,000", desc: "Safe removal of gel polish." },
+      { name: "Paraffin Wax", price: "₦10,000", desc: "Deep moisturizing treatment for hands or feet." },
+    ]
+  }
+];
+
+export default function ServicesPage() {
   return (
-    <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-      <h2 className="text-3xl font-extrabold text-[#831843] text-center mb-8">
-        Our Services
-      </h2>
-      <p className="text-center text-lg text-gray-600 mb-12">
-        At GlowByDiva, we believe nail care is more than just beauty—it’s an
-        experience of self-love, relaxation, and confidence. Our wide range of
-        services, from classic manicures and pedicures to luxury spa
-        treatments and intricate nail art, are designed to celebrate your
-        unique style while ensuring the health of your nails. Every treatment
-        is performed with the highest level of care, premium products, and an
-        eye for detail, so that every visit leaves you feeling radiant,
-        empowered, and effortlessly elegant.
-      </p>
+    <div className="bg-white">
+      <PageHeader 
+        title="Our Services" 
+        subtitle="Indulge in a wide range of treatments designed to pamper and perfect."
+      />
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {services.map((service) => (
-          <div
-            key={service.category}
-            className="relative overflow-hidden group"
-          >
-            {/* Background image */}
-            <div className="absolute inset-0">
-              <Image
-                src={service.image}
-                alt={service.category}
-                fill
-                className="object-cover transform transition duration-500 group-hover:scale-110"
-              />
-            </div>
-
-            {/* Overlay content */}
-            <div className="relative p-6 text-white bg-black/40 md:opacity-0 md:group-hover:opacity-100 transition duration-300 h-full flex flex-col">
-              <div className="flex flex-col items-center mb-4">
-                {service.icon}
-                <h3 className="text-2xl font-semibold">{service.category}</h3>
-              </div>
-              <ul className="space-y-3">
-                {service.items.map((item) => (
-                  <li key={item.name}>
-                    <h4 className="text-lg font-medium">{item.name}</h4>
-                    <p className="text-sm">{item.description}</p>
-                  </li>
+      <section className="py-20 container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          {serviceCategories.map((category, catIndex) => (
+            <motion.div 
+              key={catIndex}
+              className="mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: catIndex * 0.2 }}
+            >
+              <h2 className="text-3xl font-serif text-gray-900 mb-8 border-b border-rose-200 pb-2 inline-block">
+                {category.title}
+              </h2>
+              
+              <div className="grid gap-6">
+                {category.items.map((item, itemIndex) => (
+                  <div key={itemIndex} className="flex flex-col md:flex-row justify-between items-start md:items-center p-6 rounded-xl hover:bg-rose-50 transition-colors duration-300 border border-gray-100 hover:border-rose-100">
+                    <div className="flex-1">
+                      <div className="flex items-center mb-1">
+                        <Check className="w-4 h-4 text-rose-400 mr-2" />
+                        <h3 className="text-xl font-semibold text-gray-800">{item.name}</h3>
+                      </div>
+                      <p className="text-gray-500 text-sm ml-6">{item.desc}</p>
+                    </div>
+                    <div className="mt-4 md:mt-0 ml-0 md:ml-4">
+                      <span className="text-2xl font-medium text-rose-500">{item.price}</span>
+                    </div>
+                  </div>
                 ))}
-              </ul>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+              </div>
+            </motion.div>
+          ))}
+
+          <motion.div 
+            className="bg-gray-900 text-white p-10 rounded-2xl text-center mt-12"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h3 className="text-2xl font-serif mb-4">Ready to Book?</h3>
+            <p className="text-gray-300 mb-8">
+              Appointments fill up fast. Reserve your spot today for the ultimate pampering experience.
+            </p>
+            <a 
+              href="/contact" 
+              className="inline-block bg-rose-500 text-white px-8 py-3 rounded-full font-medium hover:bg-rose-600 transition-colors shadow-lg hover:shadow-rose-500/30"
+            >
+              Book Appointment
+            </a>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 }
